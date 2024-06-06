@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Greek Yogurt</title>
+    <style>
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(
+          175deg,
+          rgb(205, 0, 51) 0%,
+          rgb(246, 171, 198) 100%
+        );
+      }
+      h1 {
+        text-align: center;
+        color: #f9fbf9;
+        margin: 20px 0px;
+        font-size: 80px;
+        font-weight: bold;
+      }
+      h2 {
+        text-align: center;
+        color: #f9f8f6;
+        font-size: 30px;
+        margin: 20px 0px;
+        line-height: 50px;
+        border-radius: 20px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 70%;
+        width: "200";
+        border-radius: 30px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+        color: #21030c;
+        margin: 20px;
+      }
+      span {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .learn-more {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #780a19;
+        font-size: 16px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+        color: rgb(235, 244, 199);
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background: linear-gradient(
+          185deg,
+          rgb(241, 80, 57) 0%,
+          rgb(153, 16, 70) 100%
+        );
+        color: #f9f8f6;
+        font-size: 24px;
+        padding: 25px 35px;
+        border-color: #f9f8f6;
+        border-radius: 30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        padding-top: 5px;
+      }
+      .me {
+        color: rgb(139, 9, 9);
+      }
+      .background {
+        background: rgb(251, 215, 224);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <h1>I love Yogurt</h1>
+        <hr />
+        <h2>Especially Greek Yogurt</h2>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/063/original/FageFeb3s.jpg?1661003218"
+          alt="Greek Yogurt"
+        />
+
+        <p>
+          <span>Greek yogurt</span>, strained yogurt, , yogurt cheese, sack
+          yogurt, or kerned yogurt is yogurt that has been strained to remove
+          most of its whey, resulting in a thicker consistency than normal
+          unstrained yogurt, while still preserving the distinctive sour taste
+          of yogurt. Like many types, strained yogurt is often made from milk
+          enriched by boiling off some water content, or by adding extra
+          butterfat and powdered milk. In Europe and North America, it is often
+          made from low-fat or fat-free cow's milk. In Iceland, a similar
+          product named skyr is made.
+
+          <a
+            href="https://en.wikipedia.org/wiki/Strained_yogurt"
+            target="_blank"
+            class="learn-more"
+          >
+            Learn more on Wikipedia
+          </a>
+        </p>
+        <button class="buy-button">Buy Greek Yogurt</button>
+        <footer>
+          <p>
+            This website is coded by
+            <a
+              class="footer-links"
+              href="https://www.instagram.com/top_ux_ui_designer/"
+              target="_blank"
+              >Valentina Rapunzel</a
+            >
+            , published on
+            <a
+              class="footer-links"
+              href="https://github.com/Valentina-rapunzel"
+              target="_blank"
+              >GitHub</a
+            >
+            and hosted on
+            <a
+              class="footer-links"
+              href="https://app.netlify.com/teams/valentina-rapunzel/overview"
+              target="_blank"
+              >Netlify</a
+            >
+            .
+          </p>
+        </footer>
+      </div>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What's your name?");
+        let email = prompt("What's your email address?");
+        let country = prompt("Which country do you currantly live?");
+        let emoji = prompt("Show your mood with an emoji!");
+
+        if (name.length > 0 && email.length > 0) {
+          alert(
+            "Thank you," +
+              " " +
+              name +
+              "! We'll be in touch by email, your Greek Yougurt" +
+              emoji +
+              "will be delivered to" +
+              " " +
+              country
+          );
+        } else {
+          alert(
+            "You haven't filled out your data, we still don't know how to get in touch with you😒"
+          );
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
